@@ -1,0 +1,159 @@
+.ai-wrapper-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    background: #f8fafc;
+    color: #222;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ✅ Hero Section */
+.ai-hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.ai-wrapper-banner {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ai-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+/* Headings */
+.ai-wrapper-container h2 {
+    color: #14273a;
+    font-size: 1.9rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.8rem;
+    border-left: 6px solid #14273a;
+    padding-left: 0.7rem;
+}
+
+.ai-wrapper-container h3 {
+    color: #14273a;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Cards */
+.ai-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease;
+}
+
+.ai-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Lists */
+.ai-wrapper-container ul,
+.ai-wrapper-container ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ai-wrapper-container p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    /* 👈 yahan aap size adjust kar sakte ho (16 default hota hai) */
+    line-height: 1.6;
+    /* 👈 readability ke liye spacing */
+}
+
+.ai-wrapper-container li {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.ai-wrapper-container li:hover {
+    transform: translateX(4px);
+    color: #0a3a7e;
+}
+
+/* Evaluation criteria */
+.ai-criteria li {
+    margin-bottom: 1rem;
+}
+
+/* Countdown */
+.ai-countdown {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #14273a;
+}
+
+/* Button */
+.ai-register-btn {
+    background: linear-gradient(135deg, #14273a, #1e3a5f);
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ai-register-btn:hover {
+    background: linear-gradient(135deg, #1f3c60, #2c4d75);
+    transform: scale(1.05);
+}
+
+.ai-register-btn:active {
+    transform: scale(0.98);
+}
+
+.ai-footer {
+    background: #2c2f33;;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

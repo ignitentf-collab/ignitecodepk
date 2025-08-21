@@ -1,0 +1,235 @@
+/* Main wrapper */
+.home-page {
+    background-color: rgb(54, 41, 41);
+}
+
+/* HERO SECTION — full width background */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../assets/images/home-5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Shared inner container for all sections */
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0rem 1.25rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    margin-top: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* SECTIONS */
+.section {
+    background-color: rgb(54, 41, 41);
+    padding: 1.5rem 0;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 500;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* LANGUAGE LOGOS */
+.language-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.875rem;
+}
+
+.language-logos img {
+    width: 80px;
+    height: auto;
+}
+
+/* ✅ Range 1: Mobile (0–480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        font-weight: 400;
+    }
+
+    .section-heading {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .section p {
+        font-size: 0.95rem;
+        font-weight: 400;
+    }
+
+    .cta-button {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .language-logos img {
+        width: 50px;
+        padding-bottom: 1rem;
+    }
+    .container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ✅ Range 2: Tablet (481–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+        font-weight: 500;
+    }
+
+    .section-heading {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    .section p {
+        font-size: 1.05rem;
+        font-weight: 500;
+    }
+
+    .language-logos img {
+        width: 60px;
+    }
+    .container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ✅ Range 3: Laptop (769–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.4rem;
+        font-weight: 750;
+    }
+
+    .hero p {
+        font-size: 1.15rem;
+        font-weight: 550;
+    }
+
+    .section-heading {
+        font-size: 1.8rem;
+        font-weight: 750;
+    }
+
+    .section p {
+        font-size: 1.15rem;
+        font-weight: 550;
+    }
+
+    .language-logos img {
+        width: 70px;
+    }
+}
+
+/* ✅ Range 4: Large Desktop (1025px and above) */
+@media (min-width: 1025px) {
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .section-heading {
+        font-size: 2.2rem;
+        font-weight: 800;
+    }
+
+    .section p {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .language-logos img {
+        width: 90px;
+    }
+}

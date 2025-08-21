@@ -1,0 +1,230 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgb(20, 20, 20) !important;
+    box-shadow: 0 2px 5px rgba(5, 5, 5, 0.1);
+
+    /* ✅ Make it stick */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: #363636 !important;
+    /* light gray */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* subtle shadow */
+}
+
+/* Logo styles */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.orange {
+    color: #ED7C00 !important;
+    font-weight: 600;
+}
+
+.hover-logo:hover {
+    cursor: pointer;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    /* default gap */
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    position: relative;
+    padding-bottom: 4px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgb(71, 67, 67) !important;
+    color: white;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Active link */
+.nav-links a.active {
+    color: #007bff;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Search icon button */
+.search-button {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: rgb(71, 67, 67);
+}
+
+/* ✅ Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ✅ Mobile: Small phones */
+@media (max-width: 576px) {
+    .nav-links {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: #1f1f1f;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .search-button {
+        margin-top: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* ✅ Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: #1f1f1f;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 12px 0;
+        font-size: 17px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* ✅ Small laptops: 769px - 992px */
+@media (min-width: 769px) and (max-width: 992px) {
+    .nav-links {
+        gap: 0.8rem;
+        /* reduced gap for tighter fit */
+    }
+
+    .nav-links a {
+        font-size: 15px;
+        margin-left: 10px;
+        /* less left margin */
+    }
+}
+
+/* ✅ Medium laptops/tablets: 993px - 1200px */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .nav-links {
+        gap: 1rem;
+        /* slightly smaller gap */
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+}
+
+/* ✅ Large screens: 1201px and above */
+@media (min-width: 1201px) {
+    .nav-links {
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        font-size: 17px;
+        margin-left: 20px;
+    }
+}

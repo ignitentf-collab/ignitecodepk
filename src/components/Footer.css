@@ -1,0 +1,49 @@
+/* src/components/Footer.css */
+.footer {
+    text-align: center;
+    background-color: #494747;
+    color: white;
+    padding: 5px 10px;
+    /* ✅ Added padding for better spacing */
+    font-size: 14px;
+    /* ✅ Base font-size */
+    margin-top: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* ✅ Optional: ensure it sticks to bottom if layout is flex */
+}
+
+/* ✅ Responsive adjustments */
+
+/* Small phones */
+@media (max-width: 576px) {
+    .footer {
+        font-size: 13px;
+        padding: 10px 8px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+    .footer {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
+
+/* Medium screens (small laptops) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .footer {
+        font-size: 15px;
+        padding: 10px 14px;
+    }
+}
+
+/* Large desktops */
+@media (min-width: 1200px) {
+    .footer {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+}

@@ -1,0 +1,248 @@
+.partners-page {
+    background-color: rgb(224, 209, 209);
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.partners-hero {
+    background-image: url("../assets/images/home-2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.partners-content {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+}
+
+/* General image-row styles */
+.image-row {
+    margin-bottom: 3.75rem;
+}
+
+/* Row 1: Single logo centered */
+.row-1 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 18.75rem;
+    /* 300px */
+}
+
+.row-1 img {
+    height: 7.5rem;
+    /* 120px */
+    object-fit: contain;
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.row-1 img:hover {
+    transform: scale(1.05);
+}
+
+/* Row 2: Five logos evenly spaced */
+.row-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.625rem;
+    /* 10px */
+    max-width: 75rem;
+    /* 1200px */
+    margin: 0 auto;
+}
+
+.row-5 img {
+    width: 100%;
+    height: 12.5rem;
+    /* 200px */
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.row-5 img:hover {
+    transform: scale(1.05);
+}
+
+/* Row 3: Four logos with border and shadow */
+.row-4.last-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    /* 20px */
+    max-width: 62.5rem;
+    /* 1000px */
+    margin: 2.2rem auto;
+}
+
+.row-4.last-row img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: transform 0.3s;
+}
+
+.row-4.last-row img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+
+/* Mobile screens (max-width: 576px) */
+/* Har row mein 1 logo, logos bade aur centered */
+@media (max-width: 576px) {
+
+    /* Row 1: Single logo full width with some max width for better look */
+    .row-1 {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto 3rem;
+    }
+
+    .row-1 img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s;
+    }
+
+    /* Row 2: Five logos, 1 per row, full width with spacing */
+    .row-5 {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        gap: 2rem;
+        margin: 0 auto 3rem;
+    }
+
+    .row-5 img {
+        width: 100%;
+        max-height: 180px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s;
+    }
+
+    /* Row 3: Four logos, 1 per row, full width with border */
+    .row-4.last-row {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        gap: 2rem;
+        margin: 0 auto 3rem;
+    }
+
+    .row-4.last-row img {
+        width: 100%;
+        max-height: 180px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+        padding: 0.5rem;
+        transition: transform 0.3s;
+    }
+}
+
+/* Tablets (577px - 992px) */
+/* Thoda chhota size, par row 1:1, row 2:5, row 3:4 logos */
+@media (min-width: 577px) and (max-width: 992px) {
+    .row-1 {
+        grid-template-columns: 300px;
+    }
+
+    .row-1 img {
+        height: 120px;
+        width: 100%;
+    }
+
+    .row-5 {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.5rem;
+        max-width: 100%;
+    }
+    .row-4.last-row {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+
+    .row-5 img {
+        height: 100px;
+        width: 100%;
+    }
+
+
+    .row-4.last-row img {
+        height: 90px;
+        width: 100%;
+    }
+}
+
+/* Desktop and larger (993px and above) */
+/* Original large layout */
+@media (min-width: 993px) {
+    .row-1 {
+        grid-template-columns: 15rem;
+        /* smaller than before */
+        margin-bottom: 3rem;
+    }
+
+    .row-1 img {
+        height: 6rem;
+        /* was 7.5rem */
+        object-fit: contain;
+    }
+
+    .row-5 {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+    }
+
+    .row-5 img {
+        height: 10rem;
+        /* was 12.5rem */
+        object-fit: contain;
+    }
+
+    .row-4.last-row {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        max-width: 900px;
+        margin: 0 auto 3rem;
+    }
+
+    .row-4.last-row img {
+        height: 9rem;
+        /* was 11.25rem */
+        object-fit: contain;
+        /* ✅ Remove border, shadow, background */
+        background: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+    }
+}
