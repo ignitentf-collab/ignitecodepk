@@ -43,7 +43,7 @@ function AnimatedRoutes({ setLoading }) {
         <Route path="/partners" element={<Partners />} />
         <Route path="/shortlisted-teams" element={<ShortlistedTeams />} />{" "}
         {/* ✅ New route */}
-        <Route path="/AI-Wrapper-Competition" element={<AIWrapper />} />
+        <Route path="/AIWrapper" element={<AIWrapper />} />
         {/* Optional routes */}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
@@ -54,7 +54,7 @@ function AnimatedRoutes({ setLoading }) {
 // ✅ Custom layout component to conditionally show Navbar/Footer
 function LayoutWrapper({ children }) {
   const location = useLocation();
-  const isAIPage = location.pathname === "/AI-Wrapper-Competition";
+  const isAIPage = location.pathname === "/AIWrapper";
 
   return (
     <>
