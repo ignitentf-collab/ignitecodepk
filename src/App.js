@@ -23,6 +23,8 @@ import AIWrapper from "./pages/AIWrapper";
 // Optional Pages
 // import NotFound from "./pages/NotFound";
 
+import { Helmet } from "react-helmet-async"; // ✅ Helmet import
+
 // ✅ This component handles routing + loading logic
 function AnimatedRoutes({ setLoading }) {
   const location = useLocation();
@@ -71,9 +73,18 @@ function LayoutWrapper({ children }) {
 
 function App() {
   const [loading, setLoading] = useState(false);
+  const location = useLocation(); // ✅ Track current route
 
   return (
     <>
+      {/* ✅ Dynamic Title Handling */}
+      <Helmet>
+        <title>
+          {location.pathname === "/AIWrapper"
+            ? "AIWrapper Competition"
+            : "CodePK Competition"}
+        </title>
+      </Helmet>
       <ScrollToTop />
       {loading && <Loader />} {/* ✅ Loader shows only during route change */}
       <LayoutWrapper>

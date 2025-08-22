@@ -4,18 +4,20 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom"; // ✅ Add this
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async"; // ✅ Import HelmetProvider
 
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      {" "}
-      {/* ✅ Wrap App with Router */}
-      <App />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        {/* ✅ Wrap App with Router */}
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>
 );
 

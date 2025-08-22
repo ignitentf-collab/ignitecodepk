@@ -3,6 +3,7 @@ import "./AIWrapper.css";
 import AIcomp from "../assets/images/AIcomp.jpg";
 import LeftLogo from "../assets/images/techdestination-logo.png"; // 👈 apna logo path daalna
 import RightLogo from "../assets/images/ignite-logo.png"; // 👈 apna logo path daalna
+import { Helmet } from "react-helmet-async"; // ✅ Title handle karne ke liye
 
 const AIWrapper = () => {
   // ✅ Countdown Timer Logic
@@ -37,6 +38,11 @@ const AIWrapper = () => {
 
   return (
     <>
+      {/* ✅ Page Title */}
+      <Helmet>
+        <title>AIWrapper Competition</title>
+      </Helmet>
+
       <div className="ai-wrapper-container">
         {/* ✅ Hero Section */}
         <div className="ai-hero">
@@ -117,9 +123,10 @@ const AIWrapper = () => {
         <div className="ai-card">
           <h3>Financial (FinTech)</h3>
           <ul>
-            <li>one</li>
-            <li>two</li>
-            <li>three</li>
+            <li>Tax fraud & anamoly detection</li>
+            <li>Smart complaint classification</li>
+            <li>License & permit automation</li>
+            <li>AI driven credit scoring & risk analysis</li>
           </ul>
         </div>
 
@@ -208,6 +215,7 @@ const AIWrapper = () => {
           </a>
         </div>
       </div>
+
       <footer className="ai-footer">
         <p>
           © 2025 Digital Pakistan AI Wrapper Competition. All rights reserved.
