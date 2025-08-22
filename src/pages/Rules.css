@@ -146,6 +146,11 @@
     font-weight: 400;
   }
 
+  .rules-content dt{
+    font-size: 1.10rem !important;
+    font-weight: 500 !important;
+  }
+
   .rules-content dd {
     font-size: 0.85rem;
     font-weight: 400;
