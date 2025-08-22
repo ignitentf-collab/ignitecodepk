@@ -45,7 +45,7 @@ function AnimatedRoutes({ setLoading }) {
         <Route path="/partners" element={<Partners />} />
         <Route path="/shortlisted-teams" element={<ShortlistedTeams />} />{" "}
         {/* ✅ New route */}
-        <Route path="/AIWrapper" element={<AIWrapper />} />
+        <Route path="/aiwrapper" element={<AIWrapper />} />
         {/* Optional routes */}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
@@ -56,7 +56,7 @@ function AnimatedRoutes({ setLoading }) {
 // ✅ Custom layout component to conditionally show Navbar/Footer
 function LayoutWrapper({ children }) {
   const location = useLocation();
-  const isAIPage = location.pathname === "/AIWrapper";
+  const isAIPage = location.pathname === "/aiwrapper";
 
   return (
     <>
@@ -80,7 +80,7 @@ function App() {
       {/* ✅ Dynamic Title Handling */}
       <Helmet>
         <title>
-          {location.pathname === "/AIWrapper"
+          {location.pathname === "/aiwrapper"
             ? "AIWrapper Competition"
             : "CodePK Competition"}
         </title>
