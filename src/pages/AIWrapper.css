@@ -91,7 +91,7 @@
 }
 
 .ai-card:hover {
-    transform: translateY(-4px);
+    /* transform: translateY(-4px); */
 }
 
 /* Lists */
@@ -117,7 +117,7 @@
 }
 
 .ai-wrapper-container li:hover {
-    transform: translateX(4px);
+    /* transform: translateX(4px); */
     color: #0a3a7e;
 }
 
