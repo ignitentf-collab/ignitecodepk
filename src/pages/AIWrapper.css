@@ -25,6 +25,28 @@
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* ✅ Logos on banner */
+.hero-logo {
+    position: absolute;
+    top: 20px;
+    width: 90px;
+    /* 👈 logo size adjust karo */
+    height: auto;
+}
+
+.left-logo {
+    left: 25px;
+    width: 10rem;
+    height: 4rem;
+}
+
+.right-logo {
+    right: 25px;
+    width: 10rem;
+    height: 4rem;
+    background: white;
+}
+
 .ai-hero-overlay {
     position: absolute;
     top: 0;
@@ -40,9 +62,6 @@
     justify-content: center;
     text-align: center;
 }
-
-
-
 
 /* Headings */
 .ai-wrapper-container h2 {
@@ -138,7 +157,8 @@
 }
 
 .ai-footer {
-    background: #2c2f33;;
+    background: #2c2f33;
+    ;
     color: #fff;
     text-align: center;
     padding: 1rem;

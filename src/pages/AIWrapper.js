@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./AIWrapper.css";
 import AIcomp from "../assets/images/AIcomp.jpg";
+import LeftLogo from "../assets/images/techdestination-logo.png"; // 👈 apna logo path daalna
+import RightLogo from "../assets/images/ignite-logo.png"; // 👈 apna logo path daalna
 
 const AIWrapper = () => {
   // ✅ Countdown Timer Logic
@@ -42,6 +44,14 @@ const AIWrapper = () => {
             src={AIcomp}
             alt="AI Competition"
             className="ai-wrapper-banner"
+          />
+
+          {/* ✅ Logos on top-left & top-right */}
+          <img src={LeftLogo} alt="Left Logo" className="hero-logo left-logo" />
+          <img
+            src={RightLogo}
+            alt="Right Logo"
+            className="hero-logo right-logo"
           />
         </div>
 
@@ -205,7 +215,6 @@ const AIWrapper = () => {
       </footer>
     </>
   );
-  
 };
 
 export default AIWrapper;
