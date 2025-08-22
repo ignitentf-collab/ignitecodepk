@@ -56,7 +56,7 @@ function AnimatedRoutes({ setLoading }) {
 // ✅ Custom layout component to conditionally show Navbar/Footer
 function LayoutWrapper({ children }) {
   const location = useLocation();
-  const isAIPage = location.pathname === "/aiwrapper";
+  const isAIPage = location.pathname.toLowerCase() === "/aiwrapper"; // ✅ fixed
 
   return (
     <>
@@ -80,7 +80,7 @@ function App() {
       {/* ✅ Dynamic Title Handling */}
       <Helmet>
         <title>
-          {location.pathname === "/aiwrapper"
+          {location.pathname.toLowerCase() === "/aiwrapper"
             ? "AIWrapper Competition"
             : "CodePK Competition"}
         </title>
