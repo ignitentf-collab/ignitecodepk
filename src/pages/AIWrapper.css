@@ -4,11 +4,14 @@
     padding: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.7;
-    background: #f8fafc;
+    background: #eef0f1;
     color: #222;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     animation: fadeIn 0.6s ease-in-out;
+}
+body{
+    background-color: #d9dadb;;
 }
 
 /* ✅ Logos Top Bar */
@@ -292,8 +295,7 @@
 /* ✅ Medium Devices (769px – 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .ai-logos{
-        justify-content: center;
-        gap: 1rem;
+        align-items: flex-start;
     }
     .top-logo {
         width: 9rem;
