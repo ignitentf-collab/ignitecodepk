@@ -46,6 +46,7 @@
 
 /* Each winner card */
 .winner-card {
+    color: #0c0b0b;
     background: #fff;
     border-radius: 12px;
     padding-top: 0px !important;

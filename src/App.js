@@ -17,6 +17,7 @@ import Rules from "./pages/Rules";
 import Winners from "./pages/Winners";
 import Partners from "./pages/Partners";
 import ShortlistedTeams from "./pages/ShortlistedTeams"; // ✅ New page import
+import Gallery from "./pages/Gallery";
 
 import AIWrapper from "./pages/AIWrapper";
 
@@ -43,7 +44,8 @@ function AnimatedRoutes({ setLoading }) {
         <Route path="/rules" element={<Rules />} />
         <Route path="/winners" element={<Winners />} />
         <Route path="/partners" element={<Partners />} />
-        <Route path="/shortlisted-teams" element={<ShortlistedTeams />} />{" "}
+        <Route path="/shortlistedteams" element={<ShortlistedTeams />} />{" "}
+        <Route path="/gallery" element={<Gallery />} />
         {/* ✅ New route */}
         <Route path="/aiwrapper" element={<AIWrapper />} />
         {/* Optional routes */}
