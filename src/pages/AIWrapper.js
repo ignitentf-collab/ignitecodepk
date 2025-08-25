@@ -44,20 +44,18 @@ const AIWrapper = () => {
       </Helmet>
 
       <div className="ai-wrapper-container">
+        {/* ✅ Logos Top Bar */}
+        <div className="ai-logos">
+          <img src={LeftLogo} alt="Left Logo" className="top-logo" />
+          <img src={RightLogo} alt="Right Logo" className="top-logo" />
+        </div>
+
         {/* ✅ Hero Section */}
         <div className="ai-hero">
           <img
             src={AIcomp}
             alt="AI Competition"
             className="ai-wrapper-banner"
-          />
-
-          {/* ✅ Logos on top-left & top-right */}
-          <img src={LeftLogo} alt="Left Logo" className="hero-logo left-logo" />
-          <img
-            src={RightLogo}
-            alt="Right Logo"
-            className="hero-logo right-logo"
           />
         </div>
 

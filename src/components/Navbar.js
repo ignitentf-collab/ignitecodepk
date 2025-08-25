@@ -99,7 +99,6 @@ const Navbar = () => {
         >
           Gallery
         </Link>
-        <button className="search-button">🔍</button>
       </nav>
     </header>
   );

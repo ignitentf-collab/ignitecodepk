@@ -87,19 +87,7 @@
     width: 100%;
 }
 
-/* Search icon button */
-.search-button {
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    cursor: pointer;
-    margin-left: 1rem;
-    transition: color 0.3s ease;
-}
 
-.search-button:hover {
-    background-color: rgb(71, 67, 67);
-}
 
 /* ✅ Hamburger menu */
 .hamburger {

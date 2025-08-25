@@ -11,6 +11,19 @@
     animation: fadeIn 0.6s ease-in-out;
 }
 
+/* ✅ Logos Top Bar */
+.ai-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.top-logo {
+    width: 12rem;
+    height: 5rem;
+}
+
 /* ✅ Hero Section */
 .ai-hero {
     position: relative;
@@ -23,44 +36,6 @@
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* ✅ Logos on banner */
-.hero-logo {
-    position: absolute;
-    top: 20px;
-    width: 90px;
-    /* 👈 logo size adjust karo */
-    height: auto;
-}
-
-.left-logo {
-    left: 25px;
-    width: 10rem;
-    height: 4rem;
-}
-
-.right-logo {
-    right: 25px;
-    width: 10rem;
-    height: 4rem;
-    background: white;
-}
-
-.ai-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 
 /* Headings */
@@ -84,14 +59,11 @@
 .ai-card {
     background: #ffffff;
     padding: 1.5rem;
+    padding-top: 0.2rem;
     margin: 1.5rem 0;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
     transition: transform 0.3s ease;
-}
-
-.ai-card:hover {
-    /* transform: translateY(-4px); */
 }
 
 /* Lists */
@@ -104,9 +76,7 @@
 .ai-wrapper-container p {
     font-size: 1.3rem;
     font-weight: 500;
-    /* 👈 yahan aap size adjust kar sakte ho (16 default hota hai) */
     line-height: 1.6;
-    /* 👈 readability ke liye spacing */
 }
 
 .ai-wrapper-container li {
@@ -117,7 +87,6 @@
 }
 
 .ai-wrapper-container li:hover {
-    /* transform: translateX(4px); */
     color: #0a3a7e;
 }
 
@@ -158,7 +127,6 @@
 
 .ai-footer {
     background: #2c2f33;
-    ;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -175,5 +143,118 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* 🔹 Responsive Breakpoints */
+
+@media (max-width: 480px) {
+    .ai-logos {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .top-logo {
+        width: 6rem;
+        height: 2.8rem;
+    }
+
+    .ai-wrapper-banner {
+        height: 200px;
+    }
+
+    .ai-wrapper-container {
+        padding: 0.8rem;
+    }
+
+    .ai-wrapper-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .ai-wrapper-container h3 {
+        font-size: 1rem;
+    }
+
+    .ai-wrapper-container p,
+    .ai-wrapper-container li {
+        font-size: 0.9rem;
+    }
+
+    .ai-countdown {
+        font-size: 0.9rem;
+    }
+
+    .ai-register-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* ✅ Small Devices (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .ai-logos {
+        flex-direction: row;
+        gap: 0.8rem;
+    }
+
+    .top-logo {
+        width: 6rem;
+        height: 2rem;
+    }
+
+    .ai-wrapper-banner {
+        height: 240px;
+    }
+
+    .ai-wrapper-container {
+        padding: 1rem;
+    }
+
+    .ai-wrapper-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .ai-wrapper-container h3 {
+        font-size: 1.1rem;
+    }
+
+    .ai-wrapper-container p,
+    .ai-wrapper-container li {
+        font-size: 1rem;
+    }
+
+    .ai-countdown {
+        font-size: 1rem;
+    }
+
+    .ai-register-btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+    }
+}
+
+/* ✅ Medium Devices (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .top-logo {
+        width: 9rem;
+        height: 4rem;
+    }
+
+    .ai-wrapper-banner {
+        height: 350px;
+    }
+
+    .ai-wrapper-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .ai-wrapper-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .ai-wrapper-container p,
+    .ai-wrapper-container li {
+        font-size: 1.1rem;
     }
 }
