@@ -165,7 +165,14 @@
     }
 
     .ai-wrapper-banner {
-        height: 200px;
+         width: 100% !important;
+        /* screen ke width tak kheench do */
+        height: auto !important;
+         /* proportion safe rahe */
+         max-height: 350px;
+        /* optional: agar bohot lambi image hai */
+        object-fit: contain;
+        /* pura image show ho, crop na ho */
     }
 
     .ai-wrapper-container {
@@ -228,9 +235,11 @@
         height: 3rem;
     }
 
-    .ai-wrapper-banner {
-        height: 250px;
-    }
+        .ai-wrapper-banner {
+            max-height: 400px;
+            object-fit: cover;
+            /* thoda crop ho sakta hai banner jaisa look dene ke liye */
+        }
 
     .ai-wrapper-container {
         padding: 1.5rem;
@@ -284,15 +293,17 @@
 @media (min-width: 769px) and (max-width: 1024px) {
     .ai-logos{
         justify-content: center;
+        gap: 1rem;
     }
     .top-logo {
         width: 9rem;
         height: 4rem;
     }
 
-    .ai-wrapper-banner {
-        height: 350px;
-    }
+        .ai-wrapper-banner {
+            max-height: 500px;
+            object-fit: cover;
+        }
 
     .ai-wrapper-container h2 {
         font-size: 1.6rem;
