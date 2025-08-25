@@ -14,7 +14,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Rules from "./pages/Rules";
-import Calendar from "./pages/Calendar";
+import Winners from "./pages/Winners";
 import Partners from "./pages/Partners";
 import ShortlistedTeams from "./pages/ShortlistedTeams"; // ✅ New page import
 
@@ -41,7 +41,7 @@ function AnimatedRoutes({ setLoading }) {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/rules" element={<Rules />} />
-        <Route path="/calendar" element={<Calendar />} />
+        <Route path="/winners" element={<Winners />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/shortlisted-teams" element={<ShortlistedTeams />} />{" "}
         {/* ✅ New route */}

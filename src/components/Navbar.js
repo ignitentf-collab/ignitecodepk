@@ -72,11 +72,11 @@ const Navbar = () => {
           Rules
         </Link>
         <Link
-          to="/calendar"
-          className={current === "/calendar" ? "active" : ""}
+          to="/winners"
+          className={current === "/winners" ? "active" : ""}
           onClick={closeMenu}
         >
-          Calendar
+          Winners
         </Link>
         <Link
           to="/partners"
