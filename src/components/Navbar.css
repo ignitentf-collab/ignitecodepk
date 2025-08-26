@@ -120,30 +120,36 @@
 /* ✅ Mobile: Small phones */
 @media (max-width: 576px) {
     .nav-links {
-        position: absolute;
-        top: 65px;
-        left: 0;
-        width: 100%;
-        background-color: #1f1f1f;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        display: none;
-    }
+            position: absolute;
+            top: 65px;
+            left: 0;
+            width: 100%;
+            background-color: #1f1f1f;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 20px;
+            /* 👈 pehle padding hatao */
+    
+            /* 👇 Animation ke liye properties */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.3s ease;
+        }
 
-    .nav-links.active {
-        display: flex;
-    }
+        .nav-links.active {
+            max-height: 500px;
+            /* jitni zarurat ho utna rakh lo */
+            padding: 20px;
+            /* open hote hi padding aa jayegi */
+        }
 
-    .nav-links a {
-        margin: 10px 0;
-        font-size: 16px;
-        width: 100%;
-    }
+                .nav-links a {
+                    margin: 10px 0;
+                    font-size: 16px;
+                    width: auto;
+                    display: inline-block;
+                }
 
-    .search-button {
-        margin-top: 10px;
-    }
 
     .hamburger {
         display: flex;
@@ -153,25 +159,32 @@
 /* ✅ Tablets */
 @media (min-width: 577px) and (max-width: 768px) {
     .nav-links {
-        position: absolute;
-        top: 65px;
-        left: 0;
-        width: 100%;
-        background-color: #1f1f1f;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        display: none;
-    }
+            position: absolute;
+            top: 65px;
+            left: 0;
+            width: 100%;
+            background-color: #1f1f1f;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 20px;
+    
+            /* 👇 Slide-down effect */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.3s ease;
+        }
 
-    .nav-links.active {
-        display: flex;
-    }
+        .nav-links.active {
+            max-height: 500px;
+            padding: 20px;
+        }
 
-    .nav-links a {
-        margin: 12px 0;
-        font-size: 17px;
-    }
+                .nav-links a {
+                    margin: 12px 0;
+                    font-size: 17px;
+                    width: auto;
+                    display: inline-block;
+                }
 
     .hamburger {
         display: flex;
