@@ -4,31 +4,31 @@ import { motion } from "framer-motion";
 import "./Gallery.css";
 
 /* Imports sab upar */
-import img1 from "../assets/images/img-1.jpeg";
-import img2 from "../assets/images/img-2.jpeg";
-import img3 from "../assets/images/img-3.jpeg";
-import img4 from "../assets/images/img-4.jpeg";
-import img5 from "../assets/images/img-5.jpeg";
-import img6 from "../assets/images/img-6.jpeg";
-import img7 from "../assets/images/img-7.jpeg";
-import img8 from "../assets/images/img-8.jpeg";
-import img9 from "../assets/images/img-9.jpeg";
-import img10 from "../assets/images/img-10.jpeg";
-import img11 from "../assets/images/img-11.jpeg";
-import img12 from "../assets/images/img-12.jpeg";
-import img13 from "../assets/images/img-13.jpeg";
-import img14 from "../assets/images/img-14.jpeg";
-import img15 from "../assets/images/img-15.jpeg";
-import img16 from "../assets/images/img-16.jpeg";
-import img17 from "../assets/images/img-17.jpeg";
-import img18 from "../assets/images/img-18.jpeg";
-import img19 from "../assets/images/img-19.jpeg";
-import img20 from "../assets/images/img-20.jpeg";
-import img21 from "../assets/images/img-21.jpeg";
-import img22 from "../assets/images/img-22.jpeg";
-import img23 from "../assets/images/img-23.jpeg";
-import img25 from "../assets/images/img-25.jpeg";
-import img26 from "../assets/images/img-26.jpeg";
+import img1 from "../assets/images/img-1.JPG";
+import img2 from "../assets/images/img-2.JPG";
+import img3 from "../assets/images/img-3.JPG";
+import img4 from "../assets/images/img-4.JPG";
+import img5 from "../assets/images/img-5.JPG";
+import img6 from "../assets/images/img-6.JPG";
+import img7 from "../assets/images/img-7.JPG";
+import img8 from "../assets/images/img-8.JPG";
+import img9 from "../assets/images/img-9.JPG";
+import img10 from "../assets/images/img-10.JPG";
+import img11 from "../assets/images/img-11.JPG";
+import img12 from "../assets/images/img-12.JPG";
+import img13 from "../assets/images/img-13.JPG";
+import img14 from "../assets/images/img-14.JPG";
+import img15 from "../assets/images/img-15.JPG";
+import img16 from "../assets/images/img-16.JPG";
+import img17 from "../assets/images/img-17.JPG";
+import img18 from "../assets/images/img-18.JPG";
+import img19 from "../assets/images/img-19.JPG";
+import img20 from "../assets/images/img-20.JPG";
+import img21 from "../assets/images/img-21.JPG";
+import img22 from "../assets/images/img-22.JPG";
+import img23 from "../assets/images/img-23.JPG";
+import img25 from "../assets/images/img-25.JPG";
+import img26 from "../assets/images/img-26.JPG";
 
 const pageVariants = {
   initial: { opacity: 0, y: 40 },
