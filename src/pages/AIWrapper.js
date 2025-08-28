@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./AIWrapper.css";
 import AIcomp from "../assets/images/AIcomp.jpg";
-import LeftLogo from "../assets/images/techdestination-logo.png"; // 👈 apna logo path daalna
-import RightLogo from "../assets/images/ignite-logo.png"; // 👈 apna logo path daalna
-import { Helmet } from "react-helmet-async"; // ✅ Title handle karne ke liye
+import LeftLogo from "../assets/images/techdestination-logo.png";
+import RightLogo from "../assets/images/ignite-logo.png";
+import { Helmet } from "react-helmet-async";
+
+// ✅ Domain logos
+import ETech from "../assets/images/ETech.png";
+import HTech from "../assets/images/HTech.png";
+import GTech from "../assets/images/GTech.png";
+import ATech from "../assets/images/ATech.png";
+import FTech from "../assets/images/FTech.png";
 
 const AIWrapper = () => {
   // ✅ Countdown Timer Logic
@@ -15,7 +22,7 @@ const AIWrapper = () => {
   });
 
   useEffect(() => {
-    const deadline = new Date("2025-09-30T23:59:59").getTime(); // 🔹 yahan apni deadline set karen
+    const deadline = new Date("2025-09-30T23:59:59").getTime();
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const diff = deadline - now;
@@ -38,19 +45,18 @@ const AIWrapper = () => {
 
   return (
     <>
-      {/* ✅ Page Title */}
       <Helmet>
         <title>AIWrapper Competition</title>
       </Helmet>
 
       <div className="ai-wrapper-container">
-        {/* ✅ Logos Top Bar */}
+        {/* ✅ Logos */}
         <div className="ai-logos">
           <img src={LeftLogo} alt="Left Logo" className="top-logo" />
           <img src={RightLogo} alt="Right Logo" className="top-logo" />
         </div>
 
-        {/* ✅ Hero Section */}
+        {/* ✅ Hero Banner */}
         <div className="ai-hero">
           <img
             src={AIcomp}
@@ -60,12 +66,43 @@ const AIWrapper = () => {
         </div>
 
         <p>
-          The Digital Pakistan AI Wrapper Competition 2025 is a national-level
-          challenge aiming to identify and promote AI-based solutions tailored
-          to local challenges in Pakistan. The competition will be conducted in
-          two stages – Regional Rounds and a Grand Finale in Islamabad –
-          covering four domains.
+          The AI Wrapper Competition 2025, under the Digital Pakistan
+          initiative, is a national-level challenge aiming to identify and
+          promote AI-based solutions tailored to local challenges in Pakistan.
+          This strategic initiative is aligned with Pakistan’s National AI
+          Policy by fostering a skilled workforce, promoting ethical and
+          explainable AI, and catalysing civic innovation in EdTech,
+          Health-Tech, Gov-Tech, Fin-Tech and Climate-Tech.
         </p>
+        <p>
+          By mobilizing AI wrapper fellows and creating a pipeline of deployable
+          solutions, it builds national capacity for real world AI adoption.
+          Internationally, it meets global standards by leveraging cloud
+          infrastructure, open datasets, and cross-sector collaboration. The
+          competition elevates Pakistan’s AI profile by preparing teams for
+          global stages reinforcing a sustainable, inclusive, and
+          innovation-driven digital ecosystem.
+        </p>
+
+        <h2>Objectives</h2>
+        <ul>
+          <li>To promote applied AI innovation in proposed priority areas</li>
+          <li>
+            To build a community of 500+ AI fellows and produce 25+ prototypes
+          </li>
+          <li>
+            To inspire public sector digital transformation through scalable
+            solutions
+          </li>
+          <li>
+            Support entrepreneurship and incubation pathways for young
+            innovators
+          </li>
+          <li>
+            Position Pakistan in global AI competitions (AI for Good, NeurIPS)
+          </li>
+          <li>To foster academia–industry–government collaboration</li>
+        </ul>
 
         <h2>DOMAINS</h2>
         <p>
@@ -73,59 +110,68 @@ const AIWrapper = () => {
           the chosen domain.
         </p>
 
-        {/* ✅ Education */}
-        <div className="ai-card">
-          <h3>Education (EdTech)</h3>
-          <ul>
-            <li>Digital access to quality education in underserved regions</li>
-            <li>Personalized learning & adaptive assessment</li>
-            <li>AI-powered learning analytics to improve outcomes</li>
-            <li>Accessibility for students with special needs</li>
-          </ul>
-        </div>
+        <div className="ai-cards">
+          {/* ✅ Education */}
+          <div className="ai-card">
+            <img src={ETech} alt="EdTech Logo" className="domain-logo" />
+            <h3>Education (EdTech)</h3>
+            <ul>
+              <li>
+                Digital access to quality education in underserved regions
+              </li>
+              <li>Personalized learning & adaptive assessment</li>
+              <li>AI-powered learning analytics to improve outcomes</li>
+              <li>Accessibility for students with special needs</li>
+            </ul>
+          </div>
 
-        {/* ✅ Health */}
-        <div className="ai-card">
-          <h3>Health (HealthTech)</h3>
-          <ul>
-            <li>Early disease detection using AI</li>
-            <li>Health record digitization & predictive analytics</li>
-            <li>Remote diagnostics & telemedicine AI solutions</li>
-            <li>AI-assisted drug interaction & prescription safety</li>
-          </ul>
-        </div>
+          {/* ✅ Health */}
+          <div className="ai-card">
+            <img src={HTech} alt="HealthTech Logo" className="domain-logo" />
+            <h3>Health (HealthTech)</h3>
+            <ul>
+              <li>Early disease detection using AI</li>
+              <li>Health record digitization & predictive analytics</li>
+              <li>Remote diagnostics & telemedicine AI solutions</li>
+              <li>AI-assisted drug interaction & prescription safety</li>
+            </ul>
+          </div>
 
-        {/* ✅ Governance */}
-        <div className="ai-card">
-          <h3>Governance (GovTech)</h3>
-          <ul>
-            <li>Citizen service automation & complaint redressal</li>
-            <li>AI-driven policy decision support systems</li>
-            <li>Fraud detection in tax, subsidies & public finance</li>
-            <li>Transparency & accountability tools using AI</li>
-          </ul>
-        </div>
+          {/* ✅ Governance */}
+          <div className="ai-card">
+            <img src={GTech} alt="GovTech Logo" className="domain-logo" />
+            <h3>Governance (GovTech)</h3>
+            <ul>
+              <li>Citizen service automation & complaint redressal</li>
+              <li>AI-driven policy decision support systems</li>
+              <li>Fraud detection in tax, subsidies & public finance</li>
+              <li>Transparency & accountability tools using AI</li>
+            </ul>
+          </div>
 
-        {/* ✅ Climate */}
-        <div className="ai-card">
-          <h3>Climate (Climate-Tech)</h3>
-          <ul>
-            <li>AI-powered disaster prediction & response planning</li>
-            <li>Air quality monitoring & public health advisories</li>
-            <li>AI for climate-driven agricultural planning</li>
-            <li>Flood/drought risk analysis using satellite & IoT data</li>
-          </ul>
-        </div>
+          {/* ✅ Climate */}
+          <div className="ai-card">
+            <img src={ATech} alt="ClimateTech Logo" className="domain-logo" />
+            <h3>Climate (Climate-Tech)</h3>
+            <ul>
+              <li>AI-powered disaster prediction & response planning</li>
+              <li>Air quality monitoring & public health advisories</li>
+              <li>AI for climate-driven agricultural planning</li>
+              <li>Flood/drought risk analysis using satellite & IoT data</li>
+            </ul>
+          </div>
 
-        {/* ✅ Financial */}
-        <div className="ai-card">
-          <h3>Financial (FinTech)</h3>
-          <ul>
-            <li>Tax fraud & anamoly detection</li>
-            <li>Smart complaint classification</li>
-            <li>License & permit automation</li>
-            <li>AI driven credit scoring & risk analysis</li>
-          </ul>
+          {/* ✅ Finance */}
+          <div className="ai-card">
+            <img src={FTech} alt="FinTech Logo" className="domain-logo" />
+            <h3>Financial (FinTech)</h3>
+            <ul>
+              <li>Tax fraud & anomaly detection</li>
+              <li>Smart complaint classification</li>
+              <li>License & permit automation</li>
+              <li>AI driven credit scoring & risk analysis</li>
+            </ul>
+          </div>
         </div>
 
         <h2>EVALUATION PROCESS</h2>
@@ -195,8 +241,58 @@ const AIWrapper = () => {
           </li>
         </ul>
 
-        {/* ✅ Countdown + Register Button at the bottom */}
-        <div style={{ textAlign: "center", marginTop: "3rem" }}>
+        <h2>GUIDELINES FOR PARTICIPANTS</h2>
+        <ul>
+          <li>Participants may compete in only one of the four domains.</li>
+          <li>
+            Solutions must address local problems in Pakistan and demonstrate
+            practical feasibility.
+          </li>
+          <li>
+            Both Regional and Final rounds require working prototypes (or
+            functional MVPs).
+          </li>
+          <li>
+            Participants must arrange all resources (hardware, software,
+            datasets, compute) required for solution development.
+          </li>
+          <li>
+            Datasets may be global, but locally validated datasets (sources of
+            data) from national institutions are preferred.
+          </li>
+          <li>
+            The core AI model or wrapper integration must be developed by the
+            team; off-the-shelf solutions without significant customization will
+            be disqualified.
+          </li>
+          <li>
+            Solutions must follow ethical AI principles: transparency, fairness,
+            privacy compliance.
+          </li>
+          <li>
+            Ignite will provide broad challenge themes but no direct technical
+            assistance.
+          </li>
+          <li>
+            All intellectual property will belong to the participants, with due
+            acknowledgment to Ignite.
+          </li>
+          <li>
+            Each team will consist of up to 2 members (individuals can also
+            apply)
+          </li>
+          <li>
+            Competition is open to all citizens of Pakistan – students, faculty,
+            researchers, industry professionals, entrepreneurs.
+          </li>
+          <li>
+            One (01) Minute (60 Sec only) Video of the Product/Concept depicting
+            all possible aspects of AI Wrapper should be uploaded.
+          </li>
+        </ul>
+
+        {/* ✅ Countdown + Register */}
+        <div className="ai-register-section">
           <h3 className="ai-countdown">
             Registration closes in:{" "}
             <span>
