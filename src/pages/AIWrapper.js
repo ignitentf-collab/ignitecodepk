@@ -9,8 +9,9 @@ import { Helmet } from "react-helmet-async";
 import ETech from "../assets/images/ETech.png";
 import HTech from "../assets/images/HTech.png";
 import GTech from "../assets/images/GTech.png";
-import ATech from "../assets/images/ATech.png";
+import CTech from "../assets/images/CTech.png";
 import FTech from "../assets/images/FTech.png";
+import Timeline from "../assets/images/Timeline.png"
 
 const AIWrapper = () => {
   // ✅ Countdown Timer Logic
@@ -84,7 +85,7 @@ const AIWrapper = () => {
           innovation-driven digital ecosystem.
         </p>
 
-        <h2>Objectives</h2>
+        <h2>OBJECTIVES</h2>
         <ul>
           <li>To promote applied AI innovation in proposed priority areas</li>
           <li>
@@ -151,7 +152,7 @@ const AIWrapper = () => {
 
           {/* ✅ Climate */}
           <div className="ai-card">
-            <img src={ATech} alt="ClimateTech Logo" className="domain-logo" />
+            <img src={CTech} alt="ClimateTech Logo" className="domain-logo" />
             <h3>Climate (Climate-Tech)</h3>
             <ul>
               <li>AI-powered disaster prediction & response planning</li>
@@ -240,6 +241,9 @@ const AIWrapper = () => {
             Privacy, bias avoidance, responsible AI
           </li>
         </ul>
+
+        <h2>TIMELINE</h2>
+        <img src={Timeline} alt="Timeline img" className="timeline-img" />
 
         <h2>GUIDELINES FOR PARTICIPANTS</h2>
         <ul>

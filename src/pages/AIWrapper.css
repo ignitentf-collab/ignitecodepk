@@ -124,6 +124,10 @@ body {
     color: #0a3a7e;
 }
 
+.timeline-img{
+    width: 1200px;
+}
+
 /* ✅ Criteria */
 .ai-criteria li {
     margin-bottom: 1rem;
