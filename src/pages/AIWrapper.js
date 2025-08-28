@@ -295,6 +295,105 @@ const AIWrapper = () => {
           </li>
         </ul>
 
+        <h2>Core Technical Inclusions for AI Wrapper Solutions</h2>
+        <p>
+          The following checkpoints will be used to validate the AI Wrapper
+          solution.
+        </p>
+        <h1>1. Base Model Integration</h1>
+        <ul>
+          <li>
+            Ability to connect with foundational models (e.g., LLMs, vision
+            models, speech models).
+          </li>
+          <li>
+            Support for multiple APIs/frameworks (OpenAI, Hugging Face,
+            LangChain, local LLMs etc.).
+          </li>
+        </ul>
+
+        <h1>2. Abstraction Layer (Wrapper Logic)</h1>
+        <ul>
+          <li>Standardized API endpoints for model requests and responses.</li>
+          <li>
+            Middleware that handles prompts, input parsing, and response
+            normalization.
+          </li>
+        </ul>
+
+        <h1>3. Multi-Modal Support (if applicable)</h1>
+        <ul>
+          <li>Text, Image, Audio, Video data handling.</li>
+          <li>
+            Unified processing pipeline for different input/output formats.
+          </li>
+        </ul>
+
+        <h1>4. Orchestration & Multi-Agent Support</h1>
+        <ul>
+          <li>
+            Task decomposition and agent collaboration (e.g., planner, executor,
+            verifier agents).
+          </li>
+          <li>Workflow management for chaining multiple AI tasks.</li>
+        </ul>
+
+        <h1>5. Data Handling & Pre-/Post-Processing</h1>
+        <ul>
+          <li>Input sanitization, formatting, embedding generation.</li>
+          <li>
+            Post-response refinement (validation, summarization, ranking).
+          </li>
+        </ul>
+
+        <h1>6. Evaluation & Benchmarking Module</h1>
+        <ul>
+          <li>
+            Built-in evaluation metrics (accuracy, latency, hallucination
+            detection).
+          </li>
+          <li>Logging of model performance across tasks.</li>
+        </ul>
+
+        <h1>7. Scalability & Deployment Readiness</h1>
+        <ul>
+          <li>Containerized deployment (Docker, Kubernetes).</li>
+          <li>Cloud-native compatibility (AWS, GCP, Azure).</li>
+        </ul>
+
+        <h1>8. Security & Compliance</h1>
+        <ul>
+          <li>Secure API calls with authentication.</li>
+          <li>Data privacy compliance (GDPR-like rules).</li>
+          <li>Prompt injection defense and content filtering.</li>
+        </ul>
+
+        <h1>9. Extensibility</h1>
+        <ul>
+          <li>
+            Plugin system for integrating external tools (e.g., search engines,
+            databases).
+          </li>
+          <li>
+            Support for connecting with enterprise applications (ERP, CRM, BI
+            tools).
+          </li>
+        </ul>
+
+        <h1>10. Monitoring & Analytics</h1>
+        <ul>
+          <li>Real-time logs and dashboards for API usage.</li>
+          <li>
+            Error tracking, model drift detection, and system health checks.
+          </li>
+        </ul>
+
+        <h1>11. Documentation & Standardization</h1>
+        <ul>
+          <li>Well-documented SDKs/APIs.</li>
+          <li>Standard input-output schemas for interoperability.</li>
+        </ul>
+
         {/* ✅ Countdown + Register */}
         <div className="ai-register-section">
           <h3 className="ai-countdown">

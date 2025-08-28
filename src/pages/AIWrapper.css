@@ -61,6 +61,11 @@ body {
     /* ✅ sab headings ke neeche same gap */
 }
 
+.ai-wrapper-container h1 {
+    color: #14273a;
+    font-size: 1.2rem;
+}
+
 /* ✅ Cards Grid */
 .ai-cards {
     display: grid;
@@ -125,7 +130,7 @@ body {
 }
 
 .timeline-img{
-    width: 1200px;
+    width: 1100px;
 }
 
 /* ✅ Criteria */
