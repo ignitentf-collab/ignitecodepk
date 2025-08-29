@@ -15,6 +15,26 @@ body {
     background-color: #ecedee;
 }
 
+.scroll-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #172535;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background: #0056b3;
+}
+
 /* ✅ Logos */
 .ai-logos {
     display: flex;
@@ -26,6 +46,7 @@ body {
 .top-logo {
     width: 12rem;
     height: 5rem;
+    background: #eef0f1;
 }
 
 /* ✅ Hero Banner */
@@ -129,8 +150,9 @@ body {
     color: #0a3a7e;
 }
 
-.timeline-img{
+.timeline-img {
     width: 1100px;
+    height: 350px;
 }
 
 /* ✅ Criteria */
@@ -178,7 +200,7 @@ body {
     color: #fff;
     text-align: center;
     padding: 0.5rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     font-size: 0.9rem;
 }
 
@@ -193,6 +215,54 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* 🔹 NEW: Sticky Tabs (logos + hero ke neeche) */
+/* 🔹 Tabs (logos + hero ke neeche) */
+.ai-tabs-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* ✅ center horizontally */
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    background: #eef0f1;
+    border-bottom: 1px solid #cfd3d6;
+    padding: 0.8rem 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* ✅ Remove extra .tabs-container rule */
+
+
+.ai-tab-btn {
+    border: 1px solid #c7ccd1;
+    background: #ffffff;
+    color: #14273a;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.ai-tab-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ai-tab-btn.active {
+    background: #14273a;
+    color: #fff;
+    border-color: #14273a;
+    box-shadow: 0 4px 10px rgba(20, 39, 58, 0.25);
+}
+
+.ai-tab-content {
+    /* container ke andar hi content spacing */
 }
 
 /* 🔹 Responsive */
