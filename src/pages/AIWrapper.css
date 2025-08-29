@@ -15,6 +15,7 @@ body {
     background-color: #ecedee;
 }
 
+/* ✅ Scroll-to-top */
 .scroll-to-top {
     position: fixed;
     bottom: 25px;
@@ -79,7 +80,6 @@ body {
     font-size: 1.5rem;
     margin-top: 1.2rem;
     margin-bottom: 0.6rem;
-    /* ✅ sab headings ke neeche same gap */
 }
 
 .ai-wrapper-container h1 {
@@ -92,7 +92,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    /* thoda sa gap between cards */
     margin-top: 1.5rem;
 }
 
@@ -107,36 +106,23 @@ body {
     justify-content: flex-start;
 }
 
-/* Har domain logo ko ek box me rakho */
 .domain-logo {
     width: 80px;
-    /* fix width */
     height: 80px;
-    /* fix height */
     object-fit: contain;
-    /* image stretch nahi hogi */
     margin: 0 auto 10px auto;
-    /* center me aur thoda neeche space */
     display: block;
 }
 
-.ai-card:hover {
-    /* transform: translateY(-5px); */
-}
-
-/* ✅ Texts */
+/* ✅ Text */
 .ai-wrapper-container p {
     font-size: 1.3rem;
-    /* font-weight: 500; */
     line-height: 1.6;
 }
 
-/* ✅ Lists fix */
 .ai-card ul {
     margin: 0;
-    /* ✅ remove extra space */
     padding-left: 1.2rem;
-    /* ✅ bullet ke liye thoda space */
 }
 
 .ai-wrapper-container li {
@@ -150,11 +136,11 @@ body {
     color: #0a3a7e;
 }
 
+/* ✅ Timeline Image */
 .timeline-img {
     display: block;
     margin: 0 auto;
     max-width: 90%;
-    /* responsive rahegi */
     height: auto;
 }
 
@@ -203,7 +189,6 @@ body {
     color: #fff;
     text-align: center;
     padding: 0.5rem;
-    /* margin-top: 2rem; */
     font-size: 0.9rem;
 }
 
@@ -220,14 +205,11 @@ body {
     }
 }
 
-/* 🔹 NEW: Sticky Tabs (logos + hero ke neeche) */
-/* 🔹 Tabs (logos + hero ke neeche) */
-/* Tabs Bar */
+/* ✅ Sticky Tabs */
 .ai-tabs-bar {
     position: sticky;
     top: 0;
     background-color: #f5f5f5;
-    /* softer background */
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -236,10 +218,8 @@ body {
     z-index: 999;
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    /* subtle shadow */
 }
 
-/* Tab Buttons */
 .ai-tabs-bar button {
     background: transparent;
     border: 2px solid transparent;
@@ -259,18 +239,52 @@ body {
 
 .ai-tabs-bar button.active-tab {
     background-color: #132842;
-    /* active color */
     color: white;
     border: 2px solid #0d1b38;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
 
-.ai-tab-content {
-    /* container ke andar hi content spacing */
+/* 🔹 Responsive Breakpoints */
+
+/* Extra Small Phones */
+@media (max-width: 360px) {
+    .ai-logos {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .top-logo {
+        width: 5rem;
+        height: auto;
+    }
+
+    .ai-tabs-bar {
+        flex-direction: column;
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .ai-tabs-bar button {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .ai-wrapper-container p,
+    .ai-wrapper-container li {
+        font-size: 0.9rem;
+    }
+
+    .scroll-to-top {
+        bottom: 15px;
+        right: 15px;
+        font-size: 16px;
+        padding: 8px;
+    }
 }
 
-/* 🔹 Responsive */
+/* Small Phones */
 @media (max-width: 480px) {
     .ai-logos {
         justify-content: center;
@@ -316,8 +330,31 @@ body {
     .ai-cards {
         grid-template-columns: 1fr;
     }
+
+        .ai-tabs-bar {
+            flex-wrap: wrap;
+            /* agar buttons jyada hain to line break ho */
+            gap: 4px;
+            /* kam gap */
+            padding: 6px 8px;
+            /* thodi si padding */
+            justify-content: center;
+            /* center align */
+        }
+    
+        .ai-tabs-bar button {
+            flex: 1 1 auto;
+            /* equal width distribution */
+            min-width: 100px;
+            /* minimum size rakho */
+            padding: 6px 10px;
+            /* compact padding */
+            font-size: 0.85rem;
+            /* chhota font for readability */
+        }
 }
 
+/* Tablets */
 @media (min-width: 481px) and (max-width: 768px) {
     .top-logo {
         width: 7rem;
@@ -346,6 +383,7 @@ body {
     }
 }
 
+/* Medium Devices */
 @media (min-width: 769px) and (max-width: 1024px) {
     .top-logo {
         width: 9rem;
@@ -370,3 +408,45 @@ body {
     }
 }
 
+/* Large Screens */
+@media (min-width: 1200px) {
+    .ai-wrapper-container {
+        max-width: 1400px;
+        padding: 3rem;
+    }
+
+    .ai-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .ai-wrapper-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .ai-wrapper-container h3 {
+        font-size: 1.6rem;
+    }
+
+    .ai-wrapper-container p,
+    .ai-wrapper-container li {
+        font-size: 1.25rem;
+    }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1600px) {
+    .ai-wrapper-container {
+        max-width: 1600px;
+        padding: 4rem;
+    }
+
+    .ai-cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    }
+
+    .timeline-img {
+        max-width: 70%;
+    }
+}
