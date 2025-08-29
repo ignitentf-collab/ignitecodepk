@@ -286,6 +286,9 @@ body {
 
 /* Small Phones */
 @media (max-width: 480px) {
+    .ai-wrapper-banner {
+        max-height: 500px;
+    }
     .ai-logos {
         justify-content: center;
         gap: 1rem;
